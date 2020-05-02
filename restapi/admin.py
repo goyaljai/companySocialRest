@@ -4,4 +4,5 @@ from .models import *
 
 admin.site.register(App)
 admin.site.register(MainCategory)
+admin.site.register(MainSubCategory)
 admin.site.register(SubCategory)
