@@ -35,5 +35,5 @@ class AppViewSet(viewsets.ModelViewSet):
 
 
 class OrderRequestsViewSet(viewsets.ModelViewSet):
-    queryset = App.objects.all()
+    queryset = OrderRequests.objects.all()
     serializer_class = OrderRequestsSerializer
