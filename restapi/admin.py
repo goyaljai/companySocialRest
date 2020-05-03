@@ -5,4 +5,13 @@ from .models import *
 admin.site.register(App)
 admin.site.register(MainCategory)
 admin.site.register(MainSubCategory)
-admin.site.register(SubCategory)
+
+class OrderRequestsAdmin(admin.ModelAdmin):
+    search_fields = ['item_id','name','item_name']
+
+class SubCategoryAdmin(admin.ModelAdmin):
+    search_fields = ['id','imagesDescription']
+
+
+admin.site.register(SubCategory,SubCategoryAdmin)
+admin.site.register(OrderRequests,OrderRequestsAdmin)

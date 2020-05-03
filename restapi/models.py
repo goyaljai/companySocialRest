@@ -1,6 +1,5 @@
 from django.db import models
-from django_currentuser.middleware import (
-    get_current_user, get_current_authenticated_user)
+from django_currentuser.middleware import (get_current_authenticated_user)
 
 def user_directory_path1(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
@@ -44,4 +43,15 @@ class SubCategory(models.Model):
     imagesTitle = models.CharField(max_length=20)
     imagesDescription = models.CharField(max_length=50)
     def __str__(self):
-        return '%s' % self.imagesTitle
+        return '%s' % self.imagesDescription
+
+class OrderRequests(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=10)
+    email = models.CharField(max_length=50)
+    phone = models.CharField(max_length=10)
+    item_id = models.IntegerField()
+    item_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return 'order for %s with id %s' % (self.item_name,self.item_id)
