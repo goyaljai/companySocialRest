@@ -27,6 +27,6 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
-admin.site.site_header = "Everything Avout Clothes Admin"
-admin.site.site_title = "Everything Avout Clothes  Admin Portal"
-admin.site.index_title = "Welcome to Everything Avout Clothes Portal"
+admin.site.site_header = "Everything About Clothes Admin"
+admin.site.site_title = "Everything About Clothes  Admin Portal"
+admin.site.index_title = "Welcome to Everything About Clothes Portal"

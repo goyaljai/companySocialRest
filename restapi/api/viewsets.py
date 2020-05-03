@@ -32,3 +32,8 @@ class MainCategoryViewSet(viewsets.ModelViewSet):
 class AppViewSet(viewsets.ModelViewSet):
     queryset = App.objects.all()
     serializer_class = AppSerializer
+
+
+class OrderRequestsViewSet(viewsets.ModelViewSet):
+    queryset = App.objects.all()
+    serializer_class = OrderRequestsSerializer

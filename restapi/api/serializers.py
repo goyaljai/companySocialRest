@@ -22,3 +22,8 @@ class AppSerializer(serializers.ModelSerializer):
     class Meta:
         model = App
         fields = ['id','title','appUrl', 'appTitle', 'appMainImage']
+
+class OrderRequestsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderRequests
+        fields = ['id','name','email','phone','item_id','item_name']
