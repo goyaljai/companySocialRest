@@ -1,8 +1,5 @@
-db.sqlite3
 .idea
-media
 *.pyc
 __pycache__
 companysocial/__pycache__
 restapi/__pycache__
-*.sqlite3
