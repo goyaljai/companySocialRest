@@ -33,7 +33,7 @@ class MainSubCategory(models.Model):
     description = models.CharField(max_length=500)
 
     def __str__(self):
-        return '%s' % self.description
+        return '%s -> %s' % (self.mainSubCategory.title,self.description)
 
 class SubCategory(models.Model):
     id = models.AutoField(primary_key=True)
@@ -42,8 +42,9 @@ class SubCategory(models.Model):
     imagesUrl = models.ImageField(upload_to=user_directory_path1)
     imagesTitle = models.CharField(max_length=20)
     imagesDescription = models.CharField(max_length=50)
+    
     def __str__(self):
-        return '%s' % self.imagesDescription
+        return '%s -> %s -> %s' % (self.mainSubCategory.mainSubCategory.title,self.mainSubCategory.description,self.imagesDescription)
 
 class OrderRequests(models.Model):
     id = models.AutoField(primary_key=True)
